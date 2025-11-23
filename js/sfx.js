@@ -1,0 +1,1 @@
+const SFX=(function(){const s={};function load(n,u){const a=new Audio(u);a.preload='auto';s[n]=a;}function play(n){const a=s[n];if(!a) return;const c=a.cloneNode();c.volume=0.8;c.play().catch(()=>{});}return{load,play};})();SFX.load('click','/assets/audio/click.wav');SFX.load('success','/assets/audio/success.wav');SFX.load('error','/assets/audio/error.wav');
