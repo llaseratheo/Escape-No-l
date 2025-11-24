@@ -124,14 +124,18 @@ Puis enlève le nombre de lettres du mot LEVIER (6).
   // ⭐ LANCEMENT DU JEU
   startBtn.addEventListener("click", () => {
     SFX.play("click");
+
+    // ❗Couper totalement la musique d'intro
+    introVoice.pause();
+    introVoice.currentTime = 0;
+
     intro.classList.add("hidden");
     game.classList.remove("hidden");
 
-    if (musicToggle.checked) bg.play().catch(() => {});
-    
-    if (voiceToggle.checked) {
-      introVoice.currentTime = 0;
-      introVoice.play().catch(()=>{});
+    // Lancer la musique d’ambiance
+    if (musicToggle.checked) {
+      bg.currentTime = 0;
+      bg.play().catch(() => {});
     }
 
     loadStep(0);
