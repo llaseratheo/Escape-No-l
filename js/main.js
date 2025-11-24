@@ -68,6 +68,15 @@ Ressources restantes :
       text: `👉 Nombre magique final ?`
     }
   ];
+  // ⭐ MUSIQUE D'INTRO AU CHARGEMENT DU SITE
+  window.addEventListener("load", () => {
+      if (musicToggle.checked) {
+          bg.src = "audio/intro_theme.mp3"; 
+          bg.volume = 0.12; 
+          bg.loop = true;
+          bg.play().catch(() => {});
+      }
+  });
 
   // ⭐ LANCEMENT
   startBtn.addEventListener("click", () => {
@@ -78,12 +87,14 @@ Ressources restantes :
     introVoice.pause();
     introVoice.currentTime = 0;
 
-    // Musique de fond
+     // On bascule vers la musique d'ambiance normale
     if (musicToggle.checked) {
+      bg.pause();
+      bg.src = "audio/background.mp3";
       bg.currentTime = 0;
+      bg.volume = 0.05;
       bg.play().catch(() => {});
-    }
-
+  }
     // Narration d’intro
     if (voiceToggle.checked) {
       Narration.play("intro");
