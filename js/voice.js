@@ -1,1 +1,28 @@
-const Narration=(function(){const t={};function load(id,src){t[id]=new Audio(src);t[id].preload='auto';}function play(id){const a=t[id];if(!a) return;a.currentTime=0;a.play().catch(()=>{});}function stop(id){const a=t[id];if(a){a.pause();a.currentTime=0;}}return{load,play,stop};})();Narration.load('intro','/assets/audio/intro.mp3');for(let i=1;i<=7;i++) Narration.load('enigme'+i,`/assets/audio/enigme${i}.mp3`);Narration.load('final','/assets/audio/final.mp3');
+const Narration = (function () {
+  const t = {};
+
+  function load(id, src) {
+    t[id] = new Audio(src);
+    t[id].preload = "auto";
+  }
+
+  function play(id) {
+    const a = t[id];
+    if (!a) return;
+    a.currentTime = 0;
+    a.play().catch(() => {});
+  }
+
+  return { load, play };
+})();
+
+// INTRO
+Narration.load("intro", "assets/audio/intro_theme.mp3");
+
+// ENIGMES (1→7)
+for (let i = 1; i <= 7; i++) {
+  Narration.load("enigme" + i, `assets/audio/enigme${i}.mp3`);
+}
+
+// FINAL
+Narration.load("final", "assets/audio/final_theme.mp3");
