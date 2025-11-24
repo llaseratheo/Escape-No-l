@@ -97,14 +97,22 @@ footer {
 /* ====== RESPONSIVE ====== */
 @media (min-width: 700px) {
   .enigme-img {
-    width: 420px;
+    width: 400px;
   }
 
   .enigme-text {
     font-size: 1.1rem;
     padding: 22px;
   }
+
+  footer button {
+    font-size: 1rem;
+    padding: 12px 20px;
+  }
 }
+
+/* STOP : surtout PAS de display:flex sur le body */
+
 
 /* ====== SNOW LAYER ====== */
 #snow-container {
