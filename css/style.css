@@ -1,10 +1,194 @@
-:root{--bg:#071028;--accent:#caa43a}
-*{box-sizing:border-box;font-family:Arial,Helvetica,sans-serif;color:#fff}
-body{margin:0;background:linear-gradient(180deg,#021028,#071a36);min-height:100vh}
-#app{display:flex;align-items:center;justify-content:center;padding:24px}
-.intro-screen{max-width:900px;text-align:center}
-.intro-image{max-width:100%;height:360px;object-fit:cover;border-radius:12px}
-h1{color:var(--accent)}
-button.primary{background:var(--accent);border:none;padding:10px 18px;border-radius:8px;color:#081221;cursor:pointer}
-.hidden{display:none}
-.enigme-card{background:rgba(255,255,255,0.03);padding:12px;border-radius:8px;margin-bottom:12px}
+/* ====== RESET ====== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat", Arial, sans-serif;
+}
+
+body {
+  background: #f0f4ff;
+  color: #222;
+  overflow-x: hidden;
+}
+
+/* ====== GENERAL ====== */
+.hidden {
+  display: none !important;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* ====== INTRO SCREEN ====== */
+.intro-screen {
+  text-align: center;
+  padding: 40px 20px;
+  animation: fadeIn 1s ease;
+}
+
+.intro-image {
+  width: 250px;
+  margin: 0 auto 20px;
+}
+
+.intro-sub {
+  font-size: 1.2rem;
+  margin-bottom: 25px;
+  color: #444;
+}
+
+.controls {
+  margin-top: 25px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  align-items: center;
+}
+
+.controls label {
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.primary {
+  padding: 12px 22px;
+  background: #d22;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.primary:hover {
+  background: #b11;
+}
+
+/* ====== GAME AREA ====== */
+#game {
+  padding: 20px;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+#progress {
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+
+/* ====== ENIGMES ====== */
+.enigme-img {
+  width: 280px;
+  margin: 20px auto;
+  display: block;
+}
+
+.enigme-text {
+  white-space: pre-line;
+  background: white;
+  padding: 18px;
+  border-radius: 12px;
+  font-size: 1rem;
+  line-height: 1.5;
+  border: 1px solid #ddd;
+  margin-top: 10px;
+}
+
+.listen {
+  padding: 10px 18px;
+  background: #4b6ef5;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  margin: 15px auto 0;
+  display: block;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.listen:hover {
+  background: #3451c7;
+}
+
+/* ====== FOOTER ====== */
+footer {
+  margin-top: 25px;
+  display: flex;
+  justify-content: space-between;
+}
+
+footer button {
+  padding: 10px 15px;
+  background: #555;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+footer button:hover {
+  background: #333;
+}
+
+/* ====== FINAL SCREEN ====== */
+.final-screen {
+  text-align: center;
+  padding: 40px 20px;
+  animation: fadeIn 1s ease;
+}
+
+.outro-image {
+  width: 250px;
+  margin: 0 auto 20px;
+}
+
+/* ====== SNOW CONTAINER ====== */
+#snow-container {
+  pointer-events: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* ====== ANIMATIONS ====== */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* ====== RESPONSIVE ====== */
+@media (min-width: 700px) {
+  .enigme-img {
+    width: 400px;
+  }
+
+  .enigme-text {
+    font-size: 1.1rem;
+    padding: 22px;
+  }
+
+  footer button {
+    font-size: 1rem;
+    padding: 12px 20px;
+  }
+}
+
+@media (min-width: 1000px) {
+  body {
+    display: flex;
+    justify-content: center;
+  }
+
+  #app {
+    width: 700px;
+  }
+}
