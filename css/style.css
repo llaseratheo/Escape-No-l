@@ -1,222 +1,195 @@
-/* ====== RESET ====== */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: "Montserrat", Arial, sans-serif;
+/* ===== RESET ===== */
+
+{
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+font-family: "Montserrat", Arial, sans-serif;
 }
 
-#game {
-  background: url("/assets/images/background.png") center center / cover no-repeat fixed;
-  min-height: 100vh;
-  width: 100vw;
-  padding-top: 20px;
+html, body {
+width: 100%;
+height: 100%;
+overflow-x: hidden;
+background: black;
 }
 
-body {
-  margin: 0;
-  padding: 0;
-  overflow-x: hidden;
-  background: black; /* ou coloré */
-}
-
+/* ===== INTRO SCREEN ===== */
 #intro-screen {
-  background: url("/assets/images/intro.png") center center / cover no-repeat;
-  width: 100vw;
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-
-  /* Pour cacher le scroll inutile */
-  overflow: hidden;
-}
-
-body {
-  background: #f0f4ff;
-  color: #222;
-  overflow-x: hidden;
-}
-
-/* ====== GENERAL ====== */
-.hidden {
-  display: none !important;
-}
-
-img {
-  max-width: 100%;
-  display: block;
-}
-
-/* ====== INTRO SCREEN ====== */
-.intro-screen {
-  text-align: center;
-  padding: 40px 20px;
-  animation: fadeIn 1s ease;
+background: url("/assets/images/intro.png") center center / cover no-repeat;
+width: 100vw;
+height: 100vh;
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+text-align: center;
+overflow: hidden;
 }
 
 .intro-image {
-  width: 250px;
-  margin: 0 auto 20px;
+width: 250px;
+margin-bottom: 20px;
 }
 
 .intro-sub {
-  font-size: 1.2rem;
-  margin-bottom: 25px;
-  color: #444;
+font-size: 1.2rem;
+margin-bottom: 25px;
+color: #eee;
 }
 
 .controls {
-  margin-top: 25px;
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-  align-items: center;
-}
-
-.controls label {
-  font-size: 1rem;
-  cursor: pointer;
+margin-top: 25px;
+display: flex;
+flex-direction: column;
+gap: 12px;
+align-items: center;
 }
 
 .primary {
-  padding: 12px 22px;
-  background: #d22;
-  color: white;
-  border: none;
-  border-radius: 10px;
-  font-size: 1.1rem;
-  cursor: pointer;
-  transition: 0.2s;
+padding: 12px 22px;
+background: #d22;
+color: white;
+border: none;
+border-radius: 10px;
+font-size: 1.1rem;
+cursor: pointer;
+transition: 0.2s;
 }
 
 .primary:hover {
-  background: #b11;
+background: #b11;
 }
 
-/* ====== GAME AREA ====== */
+/* ===== GAME AREA ===== */
 #game {
-  padding: 20px;
+background: url("/assets/images/background.png") center center / cover no-repeat fixed;
+min-height: 100vh;
+width: 100vw;
+padding: 20px;
+color: #000;
+}
+
+/* Cache le game avant le lancement */
+.hidden {
+display: none !important;
 }
 
 .header {
-  text-align: center;
-  margin-bottom: 20px;
+text-align: center;
+margin-bottom: 20px;
 }
 
 #progress {
-  font-weight: bold;
-  font-size: 1.1rem;
+font-weight: bold;
+font-size: 1.2rem;
 }
 
-/* ====== ENIGMES ====== */
+/* ===== ENIGMES ===== */
 .enigme-img {
-  width: 280px;
-  margin: 20px auto;
-  display: block;
+width: 280px;
+margin: 20px auto;
+display: block;
+border-radius: 10px;
 }
 
 .enigme-text {
-  white-space: pre-line;
-  background: white;
-  padding: 18px;
-  border-radius: 12px;
-  font-size: 1rem;
-  line-height: 1.5;
-  border: 1px solid #ddd;
-  margin-top: 10px;
+white-space: pre-line;
+background: white;
+padding: 18px;
+border-radius: 12px;
+font-size: 1rem;
+line-height: 1.5;
+border: 1px solid #ddd;
+margin-top: 10px;
 }
 
 .listen {
-  padding: 10px 18px;
-  background: #4b6ef5;
-  color: white;
-  border: none;
-  border-radius: 8px;
-  margin: 15px auto 0;
-  display: block;
-  cursor: pointer;
-  transition: 0.2s;
+padding: 10px 18px;
+background: #4b6ef5;
+color: white;
+border: none;
+border-radius: 8px;
+margin: 15px auto 0;
+display: block;
+cursor: pointer;
+transition: 0.2s;
 }
 
 .listen:hover {
-  background: #3451c7;
+background: #3451c7;
 }
 
-/* ====== FOOTER ====== */
+/* ===== FOOTER ===== */
 footer {
-  margin-top: 25px;
-  display: flex;
-  justify-content: space-between;
+margin-top: 25px;
+display: flex;
+justify-content: space-between;
 }
 
 footer button {
-  padding: 10px 15px;
-  background: #555;
-  color: white;
-  border: none;
-  border-radius: 8px;
-  cursor: pointer;
+padding: 10px 15px;
+background: #555;
+color: white;
+border: none;
+border-radius: 8px;
+cursor: pointer;
 }
 
 footer button:hover {
-  background: #333;
+background: #333;
 }
 
-/* ====== FINAL SCREEN ====== */
+/* ===== FINAL SCREEN ===== */
 .final-screen {
-  text-align: center;
-  padding: 40px 20px;
-  animation: fadeIn 1s ease;
+background: url("/assets/images/background.png") center center / cover no-repeat fixed;
+min-height: 100vh;
+text-align: center;
+padding: 40px 20px;
+animation: fadeIn 1s ease;
 }
 
 .outro-image {
-  width: 250px;
-  margin: 0 auto 20px;
+width: 250px;
+margin: 0 auto 20px;
 }
 
-/* ====== SNOW CONTAINER ====== */
+/* ===== SNOW CONTAINER ===== */
 #snow-container {
-  pointer-events: none;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
+pointer-events: none;
+position: fixed;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
 }
 
-/* ====== ANIMATIONS ====== */
+/* ===== ANIMATIONS ===== */
 @keyframes fadeIn {
-  from { opacity: 0; transform: translateY(10px); }
-  to { opacity: 1; transform: translateY(0); }
+from { opacity: 0; transform: translateY(10px); }
+to { opacity: 1; transform: translateY(0); }
 }
 
-/* ====== RESPONSIVE ====== */
+/* ===== RESPONSIVE ===== */
 @media (min-width: 700px) {
-  .enigme-img {
-    width: 400px;
-  }
+.enigme-img {
+width: 400px;
+}
 
-  .enigme-text {
-    font-size: 1.1rem;
-    padding: 22px;
-  }
+.enigme-text {
+font-size: 1.1rem;
+padding: 22px;
+}
 
-  footer button {
-    font-size: 1rem;
-    padding: 12px 20px;
-  }
+footer button {
+font-size: 1rem;
+padding: 12px 20px;
+}
 }
 
 @media (min-width: 1000px) {
-  body {
-    display: flex;
-    justify-content: center;
-  }
-
-  #app {
-    width: 700px;
-  }
+#app {
+max-width: 900px;
+margin: 0 auto;
+}
 }
