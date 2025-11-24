@@ -6,6 +6,20 @@
   font-family: "Montserrat", Arial, sans-serif;
 }
 
+#intro-screen {
+  background: url("/assets/images/intro.png") center center / cover no-repeat;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+
+  /* Pour cacher le scroll inutile */
+  overflow: hidden;
+}
+
 body {
   background: #f0f4ff;
   color: #222;
