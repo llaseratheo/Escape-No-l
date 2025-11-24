@@ -14,9 +14,17 @@ document.addEventListener('DOMContentLoaded', () => {
   bg.loop = true;
   bg.volume = 1.0;
 
-  // 🎤 INTRO VOCALE
+  // 🎤 INTRO VOCALE (jouée au chargement du site)
   const introVoice = new Audio('/assets/audio/intro_theme.mp3');
   introVoice.volume = 0.4;
+
+  // ⭐ 1 — Lancer automatiquement l’intro au chargement du site
+  window.addEventListener("load", () => {
+      if (voiceToggle.checked) {
+          introVoice.currentTime = 0;
+          introVoice.play().catch(() => {});
+      }
+  });
 
   // RÉPONSES
   const solutions = ["1", "42", "18", "4", "134", "83", "520"];
@@ -68,34 +76,25 @@ Ressources restantes :
       text: `👉 Nombre magique final ?`
     }
   ];
-  // ⭐ MUSIQUE D'INTRO AU CHARGEMENT DU SITE
-  window.addEventListener("load", () => {
-      if (musicToggle.checked) {
-          bg.src = "audio/intro_theme.mp3"; 
-          bg.volume = 0.12; 
-          bg.loop = true;
-          bg.play().catch(() => {});
-      }
-  });
 
-  // ⭐ LANCEMENT
+  // ⭐ 2 — Quand on clique sur « Commencer l’aventure »
   startBtn.addEventListener("click", () => {
     SFX.play("click");
     intro.classList.add("hidden");
     game.classList.remove("hidden");
 
+    // Couper l'intro vocale
     introVoice.pause();
     introVoice.currentTime = 0;
 
-     // On bascule vers la musique d'ambiance normale
+    // Lancer la musique de fond
     if (musicToggle.checked) {
-      bg.pause();
-      bg.src = "audio/background.mp3";
       bg.currentTime = 0;
       bg.volume = 0.05;
       bg.play().catch(() => {});
-  }
-    // Narration d’intro
+    }
+
+    // Jouer narration d’intro
     if (voiceToggle.checked) {
       Narration.play("intro");
     }
