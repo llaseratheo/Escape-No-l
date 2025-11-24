@@ -1,23 +1,25 @@
 const SFX = (function () {
   const s = {};
 
-  function load(name, url) {
-    const a = new Audio(url);
-    a.preload = "auto";
-    s[name] = a;
+  function load(n, u) {
+    const a = new Audio(u);
+    a.preload = 'auto';
+    s[n] = a;
   }
 
-  function play(name) {
-    const a = s[name];
+  function play(n) {
+    const a = s[n];
     if (!a) return;
+
     const c = a.cloneNode();
-    c.volume = 0.6;
-    c.play().catch(()=>{});
+    c.volume = 0.7;
+    c.play().catch(() => {});
   }
 
   return { load, play };
 })();
 
-SFX.load("click", "assets/audio/click.wav");
-SFX.load("success", "assets/audio/success.wav");
-SFX.load("error", "assets/audio/error.wav");
+// ✔ Corrigé en .mp3
+SFX.load('click', 'assets/audio/click.mp3');
+SFX.load('success', 'assets/audio/success.mp3');
+SFX.load('error', 'assets/audio/error.mp3');
