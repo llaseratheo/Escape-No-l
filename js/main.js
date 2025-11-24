@@ -78,30 +78,30 @@ Ressources restantes :
   ];
 
   // ⭐ 2 — Quand on clique sur « Commencer l’aventure »
-  startBtn.addEventListener("click", () => {
-    SFX.play("click");
-    intro.classList.add("hidden");
-    game.classList.remove("hidden");
+    startBtn.addEventListener("click", () => {
+      SFX.play("click");
+      intro.classList.add("hidden");
+      game.classList.remove("hidden");
 
-    // Couper l'intro vocale
-    introVoice.pause();
-    introVoice.currentTime = 0;
+    // 1️⃣ Couper totalement l'intro vocale (qu'on ait cliqué tôt ou tard)
+      introVoice.pause();
+      introVoice.currentTime = 0;
 
-    // Lancer la musique de fond
-    if (musicToggle.checked) {
-      bg.currentTime = 0;
-      bg.volume = 0.05;
-      bg.play().catch(() => {});
-    }
+    // 2️⃣ Lancer la musique d'ambiance
+      if (musicToggle.checked) {
+          bg.pause();
+          bg.src = "/assets/audio/background.mp3";
+          bg.currentTime = 0;
+          bg.volume = 0.05;
+          bg.play().catch(() => {});
+      }
 
-    // Jouer narration d’intro
-    if (voiceToggle.checked) {
-      Narration.play("intro");
-    }
+    // ⚠️ IMPORTANT :
+    // On NE rejoue PLUS l'intro ici !
+    // Elle ne doit se lancer qu'au chargement du site.
 
-    loadStep(0);
+      loadStep(0);
   });
-
   // 🔍 CHARGER UNE ENIGME
   function loadStep(i) {
     const e = enigmes[i];
