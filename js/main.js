@@ -92,7 +92,7 @@ Ressources restantes :
           bg.pause();
           bg.src = "/assets/audio/background.mp3";
           bg.currentTime = 0;
-          bg.volume = 0.05;
+          bg.volume = 1.0;
           bg.play().catch(() => {});
       }
 
