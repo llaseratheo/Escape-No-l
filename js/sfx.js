@@ -19,7 +19,7 @@ const SFX = (function () {
   return { load, play };
 })();
 
-// ✔ Corrigé en .mp3
-SFX.load('click', 'assets/audio/click.mp3');
-SFX.load('success', 'assets/audio/success.mp3');
-SFX.load('error', 'assets/audio/error.mp3');
+// SFX
+SFX.load('click', '/assets/audio/click.mp3');
+SFX.load('success', '/assets/audio/success.mp3');
+SFX.load('error', '/assets/audio/error.mp3');
