@@ -12,11 +12,11 @@ document.addEventListener('DOMContentLoaded', () => {
   // 🎵 MUSIQUE DE FOND (loop)
   const bg = new Audio('/assets/audio/background.mp3');
   bg.loop = true;
-  bg.volume = 0.8;
+  bg.volume = 1.0;
 
   // 🎤 INTRO VOCALE
   const introVoice = new Audio('/assets/audio/intro_theme.mp3');
-  introVoice.volume = 0.8;
+  introVoice.volume = 0.4;
 
   // RÉPONSES
   const solutions = ["1", "42", "18", "4", "134", "83", "520"];
