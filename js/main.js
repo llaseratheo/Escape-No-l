@@ -26,21 +26,21 @@ document.addEventListener('DOMContentLoaded', () => {
       }
   });
 
-  mainContent.innerHTML = `
-  <h2>${step.title}</h2>
+    mainContent.innerHTML = `
+    <h2>${step.title}</h2>
 
-  <img src="${step.image}" class="enigma-image"/>
+    <img src="${step.image}" class="enigma-image"/>
 
-  <div class="enigma-box">
-      ${step.text}
-  </div>
+    <div class="enigma-box">
+        ${step.text}
+    </div>
 
-  <div class="answer-zone">
-      <input id="answerInput" type="number" placeholder="Ta réponse ici" />
-      <button id="validateBtn">Valider</button>
-      <button id="playVoiceBtn">🔊 Écouter l’énigme</button>
-  </div>
-`;
+    <div class="answer-zone">
+        <input id="answerInput" type="number" placeholder="Ta réponse ici" />
+        <button id="validateBtn">Valider</button>
+        <button id="playVoiceBtn">🔊 Écouter l’énigme</button>
+    </div>
+  `;
 
 
   // RÉPONSES
