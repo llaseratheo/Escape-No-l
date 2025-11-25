@@ -12,7 +12,7 @@ document.addEventListener('DOMContentLoaded', () => {
   // 🎵 MUSIQUE DE FOND (loop)
   const bg = new Audio('/assets/audio/background.mp3');
   bg.loop = true;
-  bg.volume = 1.0;
+  bg.volume = 0.8;
 
   // 🎤 INTRO VOCALE (jouée au chargement du site)
   const introVoice = new Audio('/assets/audio/intro_theme.mp3');
@@ -92,7 +92,7 @@ Ressources restantes :
           bg.pause();
           bg.src = "/assets/audio/background.mp3";
           bg.currentTime = 0;
-          bg.volume = 1.0;
+          bg.volume = 0.8;
           bg.play().catch(() => {});
       }
 
