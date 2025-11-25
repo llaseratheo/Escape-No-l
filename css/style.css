@@ -84,6 +84,15 @@ label[for="voiceToggle"] {
   display: none !important;
 }
 
+.controls label {
+    display: none !important;
+}
+
+#musicToggle,
+#voiceToggle {
+    display: none !important;
+}
+
 
 /* -------------------------------------------------
    🎁 CONTENU DU JEU
