@@ -77,9 +77,13 @@ body {
 }
 
 /* Cache totalement les deux options audio */
-.controls label {
+#musicToggle,
+#voiceToggle,
+label[for="musicToggle"],
+label[for="voiceToggle"] {
   display: none !important;
 }
+
 
 /* -------------------------------------------------
    🎁 CONTENU DU JEU
