@@ -97,6 +97,9 @@ label[for="voiceToggle"] {
     display: none !important;
 }
 
+.controls {
+    display: none !important;
+}
 
 /* -------------------------------------------------
    🎁 CONTENU DU JEU
