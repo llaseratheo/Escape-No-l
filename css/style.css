@@ -76,6 +76,11 @@ body {
   text-align: center;
 }
 
+/* Cache totalement les deux options audio */
+.controls label {
+  display: none !important;
+}
+
 /* -------------------------------------------------
    🎁 CONTENU DU JEU
 --------------------------------------------------- */
