@@ -17,25 +17,28 @@
       <!-- Image d’intro en background -->
       <div class="intro-background"></div>
 
-      <h1>Escape Noël : Les Copains de Levier</h1>
+      <div class="intro-content">
+        <h1>Escape Game<br>des Copains de Levier</h1>
 
-      <p class="intro-sub">
-        Chaque lieu de Levier cache un secret de Noël.
-        Résous les énigmes et découvre le nombre magique final !
-      </p>
+        <p class="intro-sub">
+          Chaque lieu de Levier cache un secret de Noël.<br>
+          Résous les énigmes et découvre le nombre magique final !
+        </p>
 
-      <div class="controls">
-        <button id="startBtn" class="primary">🎄 Commencer l’aventure</button>
+        <div class="controls">
+          <button id="startBtn" class="primary">🎄 Commencer l’aventure</button>
 
-        <label>
-          <input id="musicToggle" type="checkbox" checked />
-          Musique
-        </label>
-        <label>
-          <input id="voiceToggle" type="checkbox" checked />
-          Voix narrative
-        </label>
+          <label>
+            <input id="musicToggle" type="checkbox" checked />
+            Musique
+          </label>
+          <label>
+            <input id="voiceToggle" type="checkbox" checked />
+            Voix narrative
+          </label>
+        </div>
       </div>
+
     </div>
 
     <!-- JEU -->
@@ -45,26 +48,11 @@
         <div id="progress"></div>
       </div>
 
-      <main id="mainContent">
-
-        <!-- ⭐ CONTENU DES ÉNIGMES (injecté par main.js) ⭐ -->
-
-        <!-- Image de l’énigme -->
-        <img id="enigmeImage" class="enigme-image" src="" alt="Illustration de l'énigme">
-
-        <!-- Texte de l’énigme -->
-        <div class="enigme-texte-container">
-          <p id="enigmeTexte"></p>
-        </div>
-
-        <!-- Zone réponse si besoin -->
-        <div id="answerZone"></div>
-
-      </main>
+      <main id="mainContent"></main>
 
       <footer>
-        <button id="prevBtn">Précédent</button>
-        <button id="nextBtn">Suivant</button>
+        <button id="prevBtn">⬅️ Précédent</button>
+        <button id="nextBtn">Suivant ➡️</button>
       </footer>
     </div>
 
@@ -78,3 +66,4 @@
   <script src="js/main.js"></script>
 </body>
 </html>
+
