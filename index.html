@@ -11,35 +11,34 @@
 <body>
   <div id="app">
 
-    <!-- ÉCRAN D’INTRO -->
+      <!-- ÉCRAN D’INTRO -->
     <div class="intro-screen" id="intro-screen">
 
-      <!-- Image d’intro en background -->
-      <div class="intro-background"></div>
+    <!-- Image d’intro en background -->
+    <div class="intro-background"></div>
 
-      <div class="intro-content">
-        <h1>Escape Game<br>des Copains de Levier</h1>
+    <div class="intro-content">
+      <p class="intro-sub">
+        Chaque lieu de Levier cache un secret de Noël.
+        Résous les énigmes et découvre le nombre magique final !
+      </p>
 
-        <p class="intro-sub">
-          Chaque lieu de Levier cache un secret de Noël.<br>
-          Résous les énigmes et découvre le nombre magique final !
-        </p>
+      <div class="controls">
+        <button id="startBtn" class="primary">🎄 Commencer l’aventure</button>
 
-        <div class="controls">
-          <button id="startBtn" class="primary">🎄 Commencer l’aventure</button>
-
-          <label>
-            <input id="musicToggle" type="checkbox" checked />
-            Musique
-          </label>
-          <label>
-            <input id="voiceToggle" type="checkbox" checked />
-            Voix narrative
-          </label>
-        </div>
+        <label>
+          <input id="musicToggle" type="checkbox" checked />
+          Musique
+        </label>
+        <label>
+          <input id="voiceToggle" type="checkbox" checked />
+          Voix narrative
+        </label>
       </div>
-
     </div>
+
+  </div>
+
 
     <!-- JEU -->
     <div id="game" class="hidden">
