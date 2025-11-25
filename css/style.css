@@ -97,7 +97,7 @@ label[for="voiceToggle"] {
     display: none !important;
 }
 
-.controls {
+.controls * {
     display: none !important;
 }
 
