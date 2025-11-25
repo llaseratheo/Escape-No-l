@@ -4,59 +4,61 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Escape Noël : Les Copains de Levier</title>
-
-  <!-- CSS -->
   <link rel="stylesheet" href="css/style.css" />
   <link rel="stylesheet" href="css/snow.css" />
 </head>
 
 <body>
+  <div id="app">
 
-  <!-- ===== INTRO ===== -->
-  <div id="intro-screen">
-    <img src="assets/images/intro.png" alt="Intro" class="intro-image" />
-    <h1>Escape Noël : Les Copains de Levier</h1>
-    <p class="intro-sub">
-      Chaque lieu de Levier cache un secret de Noël. Résous les énigmes et découvre le nombre magique final !
-    </p>
+    <!-- ÉCRAN D’INTRO -->
+    <div class="intro-screen" id="intro-screen">
 
-    <div class="controls">
-      <button id="startBtn" class="primary">🎄 Commencer l’aventure</button>
+      <!-- Image d’intro en background -->
+      <div class="intro-background"></div>
 
-      <label>
-        <input id="musicToggle" type="checkbox" checked />
-        Musique
-      </label>
+      <h1>Escape Noël : Les Copains de Levier</h1>
 
-      <label>
-        <input id="voiceToggle" type="checkbox" checked />
-        Voix narrative
-      </label>
+      <p class="intro-sub">
+        Chaque lieu de Levier cache un secret de Noël.
+        Résous les énigmes et découvre le nombre magique final !
+      </p>
+
+      <div class="controls">
+        <button id="startBtn" class="primary">🎄 Commencer l’aventure</button>
+
+        <label>
+          <input id="musicToggle" type="checkbox" checked />
+          Musique
+        </label>
+        <label>
+          <input id="voiceToggle" type="checkbox" checked />
+          Voix narrative
+        </label>
+      </div>
     </div>
+
+    <!-- JEU -->
+    <div id="game" class="hidden">
+      <div class="header">
+        <div id="progress"></div>
+      </div>
+
+      <main id="mainContent"></main>
+
+      <footer>
+        <button id="prevBtn">Précédent</button>
+        <button id="nextBtn">Suivant</button>
+      </footer>
+    </div>
+
   </div>
 
-  <!-- ===== GAME ===== -->
-  <div id="game" class="hidden">
-    <div class="header">
-      <div id="progress"></div>
-    </div>
-
-    <main id="mainContent"></main>
-
-    <footer>
-      <button id="prevBtn">Précédent</button>
-      <button id="nextBtn">Suivant</button>
-    </footer>
-  </div>
-
-  <!-- Neige -->
   <div id="snow-container"></div>
 
-  <!-- JS -->
   <script src="js/snow.js"></script>
   <script src="js/sfx.js"></script>
   <script src="js/voice.js"></script>
   <script src="js/main.js"></script>
-
 </body>
 </html>
