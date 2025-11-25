@@ -9,29 +9,27 @@ document.addEventListener('DOMContentLoaded', () => {
   const musicToggle = document.getElementById('musicToggle');
   const voiceToggle = document.getElementById('voiceToggle');
 
-  // 🎵 MUSIQUE DE FOND (loop)
+  // 🎵 MUSIQUE AMBIANTE
   const bg = new Audio('/assets/audio/background.mp3');
   bg.loop = true;
   bg.volume = 0.8;
 
-  // 🎤 INTRO VOCALE (jouée au chargement du site)
+  // 🎤 INTRO VOCALE
   const introVoice = new Audio('/assets/audio/intro_theme.mp3');
-  introVoice.volume = 0.4;
+  introVoice.volume = 0.45;
 
-  // ⭐ 1 — Lancer automatiquement l’intro au chargement du site
+  // 🎧 Joue automatiquement l’intro au chargement
   window.addEventListener("load", () => {
-      if (voiceToggle.checked) {
-          introVoice.currentTime = 0;
-          introVoice.play().catch(() => {});
-      }
+    if (voiceToggle.checked) {
+      introVoice.currentTime = 0;
+      introVoice.play().catch(() => {});
+    }
   });
-
-  
 
   // RÉPONSES
   const solutions = ["1", "42", "18", "4", "134", "83", "520"];
 
-  // 🧩 ENIGMES
+  // ENIGMES
   const enigmes = [
     {
       title: "Énigme 1 — La Recette Perdue du Père Noël",
@@ -79,53 +77,46 @@ Ressources restantes :
     }
   ];
 
-  // ⭐ 2 — Quand on clique sur « Commencer l’aventure »
-    startBtn.addEventListener("click", () => {
-      SFX.play("click");
-      intro.classList.add("hidden");
-      game.classList.remove("hidden");
+  // 🎄 DÉMARRAGE DU JEU
+  startBtn.addEventListener("click", () => {
+    SFX.play("click");
 
-    // 1️⃣ Couper totalement l'intro vocale (qu'on ait cliqué tôt ou tard)
-      introVoice.pause();
-      introVoice.currentTime = 0;
+    intro.classList.add("hidden");
+    game.classList.remove("hidden");
 
-    // 2️⃣ Lancer la musique d'ambiance
-      if (musicToggle.checked) {
-          bg.pause();
-          bg.src = "/assets/audio/background.mp3";
-          bg.currentTime = 0;
-          bg.volume = 0.8;
-          bg.play().catch(() => {});
-      }
+    // Stop intro
+    introVoice.pause();
+    introVoice.currentTime = 0;
 
-    // ⚠️ IMPORTANT :
-    // On NE rejoue PLUS l'intro ici !
-    // Elle ne doit se lancer qu'au chargement du site.
+    // Lance musique
+    if (musicToggle.checked) {
+      bg.currentTime = 0;
+      bg.play().catch(() => {});
+    }
 
-      loadStep(0);
+    loadStep(0);
   });
-  // 🔍 CHARGER UNE ENIGME
+
+  // CHARGER UNE ÉNIGME
   function loadStep(i) {
     const e = enigmes[i];
 
-    // Couper intro
-    introVoice.pause();
-
     mainContent.innerHTML = `
       <h2>${e.title}</h2>
+
       <img src="${e.image}" class="enigme-img"/>
 
-      <p class="enigme-text">${e.text}</p>
+      <div class="enigme-text">${e.text}</div>
 
       <input id="answer" class="answer" placeholder="Ta réponse ici"/>
-      
+
       <button id="validate" class="validate">✅ Valider</button>
       <button id="playN" class="listen">🔊 Écouter l’énigme</button>
 
       <p id="feedback" class="feedback"></p>
     `;
 
-    // Jouer la narration
+    // Narration
     document.getElementById("playN").addEventListener("click", () => {
       SFX.play("click");
       Narration.play("enigme" + (i + 1));
@@ -167,3 +158,4 @@ Ressources restantes :
   });
 
 });
+
