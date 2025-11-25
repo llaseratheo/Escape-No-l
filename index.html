@@ -40,11 +40,27 @@
 
     <!-- JEU -->
     <div id="game" class="hidden">
+
       <div class="header">
         <div id="progress"></div>
       </div>
 
-      <main id="mainContent"></main>
+      <main id="mainContent">
+
+        <!-- ⭐ CONTENU DES ÉNIGMES (injecté par main.js) ⭐ -->
+
+        <!-- Image de l’énigme -->
+        <img id="enigmeImage" class="enigme-image" src="" alt="Illustration de l'énigme">
+
+        <!-- Texte de l’énigme -->
+        <div class="enigme-texte-container">
+          <p id="enigmeTexte"></p>
+        </div>
+
+        <!-- Zone réponse si besoin -->
+        <div id="answerZone"></div>
+
+      </main>
 
       <footer>
         <button id="prevBtn">Précédent</button>
