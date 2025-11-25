@@ -89,7 +89,11 @@ label[for="voiceToggle"] {
 }
 
 #musicToggle,
-#voiceToggle {
+#voiceToggle,
+.controls label,
+.controls span,
+.controls p,
+.controls div {
     display: none !important;
 }
 
