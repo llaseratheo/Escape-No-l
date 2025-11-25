@@ -57,6 +57,25 @@ body {
     background: linear-gradient(135deg, #e53935, #8b0000);
 }
 
+.intro-content {
+  position: relative;
+  margin-top: 45vh; /* ⬅️ POSITIONNE LE TEXTE PLUS BAS */
+  z-index: 2;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.intro-sub {
+  color: #fff;
+  font-size: 1.3rem;
+  text-shadow: 2px 2px 6px rgba(0,0,0,0.8);
+  max-width: 700px;
+  text-align: center;
+}
+
 /* -------------------------------------------------
    🎁 CONTENU DU JEU
 --------------------------------------------------- */
