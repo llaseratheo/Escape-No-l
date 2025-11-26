@@ -1,35 +1,35 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fin de l'aventure</title>
-    <link rel="stylesheet" href="conclusion.css">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Conclusion — Escape Noël</title>
+  <link rel="stylesheet" href="css/conclusion.css">
 </head>
 <body>
+  <div id="conclusion-screen" role="main" aria-labelledby="congrats">
+    <div class="overlay"></div>
 
-    <div id="conclusion-screen">
-        <div class="content">
-            <h1 class="conclusion-title">
-                🎄 Bravo !  
-                <br>Tu as terminé l’Escape Game des Copains de Levier !
-            </h1>
+    <div class="panel">
+      <h1 id="congrats" class="title">🎄 Bravo !</h1>
+      <p class="subtitle">Tu as terminé l’Escape Game des Copains de Levier !</p>
 
-            <p class="conclusion-text">
-                Merci pour ton courage, ton esprit d’équipe<br>
-                et ton sens de la magie de Noël !
-            </p>
+      <p class="message">
+        Merci pour ton courage, ton esprit d’équipe<br>
+        et ton sens de la magie de Noël !
+      </p>
 
-            <button id="restartBtn" class="restart-btn">
-                🔄 Rejouer l'aventure
-            </button>
-        </div>
+      <div class="actions">
+        <button id="certificateBtn" class="btn secondary">📜 Télécharger le certificat</button>
+        <button id="restartBtn" class="btn primary">🔄 Rejouer l'aventure</button>
+      </div>
     </div>
+  </div>
 
-    <audio id="finalMusic" src="assets/audio/final_theme.mp3"></audio>
-    <audio id="finalVoice" src="assets/audio/final.mp3"></audio>
+  <!-- audio (fichiers fournis dans /assets/audio) -->
+  <audio id="finalTheme" src="assets/audio/final_theme.mp3" preload="auto"></audio>
+  <audio id="finalVoice" src="assets/audio/final.mp3" preload="auto"></audio>
 
-    <script src="conclusion.js"></script>
-
+  <script src="js/conclusion.js"></script>
 </body>
 </html>
