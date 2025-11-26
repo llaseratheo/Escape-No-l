@@ -16,9 +16,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // 🎤 INTRO VOCALE
   const introVoice = new Audio('/assets/audio/intro_theme.mp3');
-  introVoice.volume = 0.45;
+  introVoice.volume = 0.2;
   const introNarration = new Audio('/assets/audio/intro.mp3');
-  introNarration.volume = 0.8;
+  introNarration.volume = 1.0;
 
 
   // 🎧 Joue automatiquement l’intro au chargement
