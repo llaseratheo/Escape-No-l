@@ -1,23 +1,35 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Conclusion</title>
-  <link rel="stylesheet" href="css/style.css" />
-  <link rel="stylesheet" href="css/snow.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fin de l'aventure</title>
+    <link rel="stylesheet" href="conclusion.css">
 </head>
-
 <body>
-  <div class="final-screen">
-    <img src="assets/images/outro.png" alt="Final" class="outro-image" />
-    <h2>Félicitations !</h2>
-    <p>Tu as découvert le nombre magique — la magie de Noël brille à nouveau sur Levier.</p>
 
-    <audio controls autoplay src="assets/audio/final_theme.mp3"></audio>
-  </div>
+    <div id="conclusion-screen">
+        <div class="content">
+            <h1 class="conclusion-title">
+                🎄 Bravo !  
+                <br>Tu as terminé l’Escape Game des Copains de Levier !
+            </h1>
 
-  <div id="snow-container"></div>
-  <script src="js/snow.js"></script>
+            <p class="conclusion-text">
+                Merci pour ton courage, ton esprit d’équipe<br>
+                et ton sens de la magie de Noël !
+            </p>
+
+            <button id="restartBtn" class="restart-btn">
+                🔄 Rejouer l'aventure
+            </button>
+        </div>
+    </div>
+
+    <audio id="finalMusic" src="assets/audio/final_theme.mp3"></audio>
+    <audio id="finalVoice" src="assets/audio/final.mp3"></audio>
+
+    <script src="conclusion.js"></script>
+
 </body>
 </html>
