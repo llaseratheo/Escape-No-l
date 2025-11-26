@@ -12,7 +12,7 @@ document.addEventListener('DOMContentLoaded', () => {
   // 🎵 MUSIQUE AMBIANTE
   const bg = new Audio('/assets/audio/background.mp3');
   bg.loop = true;
-  bg.volume = 0.8;
+  bg.volume = 0.6;
 
   // 🎤 INTRO VOCALE
   const introVoice = new Audio('/assets/audio/intro_theme.mp3');
