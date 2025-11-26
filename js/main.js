@@ -17,14 +17,22 @@ document.addEventListener('DOMContentLoaded', () => {
   // 🎤 INTRO VOCALE
   const introVoice = new Audio('/assets/audio/intro_theme.mp3');
   introVoice.volume = 0.45;
+  const introNarration = new Audio('/assets/audio/intro.mp3');
+  introNarration.volume = 0.8;
+
 
   // 🎧 Joue automatiquement l’intro au chargement
   window.addEventListener("load", () => {
-    if (voiceToggle.checked) {
-      introVoice.currentTime = 0;
-      introVoice.play().catch(() => {});
-    }
-  });
+
+    // 🎵 Musique intro
+    introVoice.currentTime = 0;
+    introVoice.play().catch(() => {});
+
+    // 🎤 Voix narrative intro
+    introNarration.currentTime = 0;
+    introNarration.play().catch(() => {});
+});
+
 
   // RÉPONSES
   const solutions = ["1", "42", "18", "4", "134", "83", "520"];
@@ -87,6 +95,9 @@ Ressources restantes :
     // Stop intro
     introVoice.pause();
     introVoice.currentTime = 0;
+    introNarration.pause();
+    introNarration.currentTime = 0;
+
 
     // Lance musique
     if (musicToggle.checked) {
