@@ -24,13 +24,15 @@ document.addEventListener('DOMContentLoaded', () => {
   // 🎧 Joue automatiquement l’intro au chargement
   window.addEventListener("load", () => {
 
-    // 🎵 Musique intro
+    // 🎵 Musique intro (démarre immédiatement)
     introVoice.currentTime = 0;
     introVoice.play().catch(() => {});
 
-    // 🎤 Voix narrative intro
+    // 🎤 Voix narrative intro (démarre après 3,5s)
     introNarration.currentTime = 0;
-    introNarration.play().catch(() => {});
+    setTimeout(() => {
+        introNarration.play().catch(() => {});
+    }, 3500); // 3500 ms = 3,5 secondes
 });
 
 
