@@ -205,23 +205,42 @@ h2 {
 }
 
 .nav-buttons button {
-    background: #b71c1c;
+    background: linear-gradient(135deg, #b01518, #8f0f13);
     color: white;
     border: none;
-    padding: 12px 25px;
-    border-radius: 10px;
+    padding: 12px 28px;
+    border-radius: 28px;
     cursor: pointer;
     font-size: 1rem;
-    transition: 0.2s;
+    font-weight: 600;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.25);
+    transition: 0.25s ease;
 }
 
+/* Petite icône cadeau pour rendre les boutons festifs */
+.nav-buttons button::before {
+    content: "🎁";
+    font-size: 1.1rem;
+}
+
+/* Désactivé */
 .nav-buttons button:disabled {
     background: #888;
+    box-shadow: none;
     cursor: not-allowed;
 }
 
 .nav-buttons button:hover:not(:disabled) {
-    transform: scale(1.05);
+    transform: translateY(-2px);
+    filter: brightness(1.12);
+}
+
+.nav-buttons button:active:not(:disabled) {
+    transform: translateY(0);
+    filter: brightness(0.9);
 }
 
 /* -------------------------------------------------
