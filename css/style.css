@@ -198,26 +198,26 @@ h2 {
    ⬅️➡️ NAVIGATION ENTRE ENIGMES
 --------------------------------------------------- */
 
-/* Style spécial boutons Noël */
+/* Mini Boutons Noël */
 .btn-xmas {
     background: linear-gradient(135deg, #b01518, #8f0f13) !important;
     color: white !important;
     border: none !important;
-    padding: 12px 28px !important;
-    border-radius: 28px !important;
+    padding: 6px 14px !important;   /* beaucoup plus petit */
+    border-radius: 18px !important;
     cursor: pointer !important;
-    font-size: 1rem !important;
+    font-size: 0.8rem !important;   /* taille réduite */
     font-weight: 600 !important;
     display: inline-flex !important;
     align-items: center !important;
-    gap: 8px !important;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.25) !important;
+    gap: 6px !important;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.22) !important;
     transition: 0.25s ease !important;
 }
 
 .btn-xmas::before {
     content: "🎁";
-    font-size: 1.1rem;
+    font-size: 0.85rem !important;  /* icône plus petite */
 }
 
 .btn-xmas:disabled {
@@ -227,7 +227,7 @@ h2 {
 }
 
 .btn-xmas:hover:not(:disabled) {
-    transform: translateY(-2px) !important;
+    transform: translateY(-1px) !important;
     filter: brightness(1.12) !important;
 }
 
