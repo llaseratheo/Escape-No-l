@@ -125,11 +125,11 @@ h2 {
 /* 🔎 Images d’énigmes — jamais rognées */
 .enigme-img {
     width: 100%;
-    max-width: 480px;
-    max-height: 45vh;
+    max-width: 650px;     /* augmente la largeur maximale */
+    max-height: 60vh;     /* augmente la hauteur affichée */
     object-fit: contain !important;
     display: block;
-    margin: 10px auto 20px auto;
+    margin: 10px auto 25px auto;
     border-radius: 12px;
 }
 
