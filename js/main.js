@@ -74,7 +74,7 @@ Si chaque symbole correspond à la première lettre de son mot en français — 
 `
     },
     {
-      title: "Énigme 3 — Rondé",
+      title: "Énigme 3 — Le Rondé",
       image: "/assets/images/enigme3.png",
       text: ` 
 Sous le grand sapin du Rondé, sept guirlandes s’entremêlent.
@@ -87,7 +87,7 @@ car une bourrasque glacée a emporté une partie de la déco.
     `
     },
     {
-      title: "Énigme 4 — Gymnase",
+      title: "Énigme 4 — Le Gymnase",
       image: "/assets/images/enigme4.png",
       text: `
 Dans le gymnase de Levier, quatre vestiaires sont alignés : un, deux, trois et quatre.
@@ -106,7 +106,7 @@ Le Père Noël a noté leurs exigences sur un parchemin :
   `
     },
     {
-      title: "Énigme 5 — Forêt",
+      title: "Énigme 5 — La Forêt de Levier",
       image: "/assets/images/enigme5.png",
       text: `
 Dans la forêt de Levier, la neige étouffe les sons.
@@ -127,7 +127,7 @@ mais attention : certaines lettres valent plus que d’autres…
   `
     },
     {
-      title: "Énigme 6 — École",
+      title: "Énigme 6 — L'École",
       image: "/assets/images/enigme6.png",
       text: `
 Sur le tableau noir de l’école, les enfants ont laissé un message mystérieux :
@@ -143,7 +143,7 @@ A égale un, B égale deux, C égale trois, et ainsi de suite.
     `
     },
     {
-      title: "Énigme 7 — Grande Place",
+      title: "Énigme 7 — La Place du Village",
       image: "/assets/images/enigme7.png",
       text: `
 Le maire s’avance sur la grande place illuminée.
