@@ -77,8 +77,7 @@ Si chaque symbole correspond à la première lettre de son mot en français — 
       title: "Énigme 3 — Rondé",
       image: "/assets/images/enigme3.png",
       text: ` 
-Sous le grand sapin du Rondé, sept guirlandes s’entremêlent :
-trois, cinq, quatre, six, deux, sept et huit étoiles chacune.
+Sous le grand sapin du Rondé, sept guirlandes s’entremêlent.
 
 Le Père Noël te demande de ne garder que celles dont le nombre d’étoiles est pair,
 puis d’additionner ces nombres et de soustraire deux,
