@@ -186,7 +186,7 @@ puis soustrais le nombre de lettres du mot Levier.”
     const e = enigmes[i];
 
     mainContent.innerHTML = `
-      <h2>${e.title}</h2>
+      <div class="enigme-title">${e.title}</div>
 
       <img src="${e.image}" class="enigme-img"/>
 
