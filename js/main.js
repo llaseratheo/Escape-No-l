@@ -46,44 +46,115 @@ document.addEventListener('DOMContentLoaded', () => {
       image: "/assets/images/enigme1.png",
       text: `
 Dans le marché enneigé de Levier, les effluves de chocolat chaud embaument la place.
+Mais catastrophe… le Père Noël a égaré sa recette secrète !
 
-Ressources restantes :
-- 6 cuillères de cacao  
-- 4 cuillères de sucre  
-- 3 doses de lait  
+Un lutin retrouve un petit papier taché de cacao :
+“Pour chaque tasse, prends deux cuillères de cacao, ajoute la moitié de sucre qu’il faut pour deux tasses, puis verse autant de lait que de cuillères de cacao.”
 
-👉 Combien de tasses complètes peut-on préparer ?
-`
+Le problème ? Il ne reste que six cuillères de cacao, quatre de sucre et trois de lait.
+
+👉 Combien de tasses complètes de chocolat chaud peut-on préparer sans tricher sur la recette ?
+'
     },
     {
       title: "Énigme 2 — La Mairie",
       image: "/assets/images/enigme2.png",
-      text: `K, S, L → somme des rangs → résultat ?`
+      text: '
+Devant la mairie de Levier, les blasons étincellent sous la neige.
+Trois symboles s’y dessinent :
+Une clé, symbole du passage.
+Une scie, symbole des bûcherons.
+Un livre, symbole du savoir.
+
+Levier vient du mot latin levare, qui signifie “soulever”.
+
+Si chaque symbole correspond à la première lettre de son mot en français — K, S, et L — additionne leur rang dans l’alphabet.
+
+👉 Quel est le total obtenu ?
+'
     },
     {
       title: "Énigme 3 — Rondé",
       image: "/assets/images/enigme3.png",
-      text: `Garde les nombres pairs, additionne, enlève 2.`
+      text: `
+Sous le grand sapin du Rondé, sept guirlandes s’entremêlent :
+trois, cinq, quatre, six, deux, sept et huit étoiles chacune.
+
+Le Père Noël te demande de ne garder que celles dont le nombre d’étoiles est pair,
+puis d’additionner ces nombres et de soustraire deux,
+car une bourrasque glacée a emporté une partie de la déco.
+
+👉 Quel est le nombre final ?
+    `
     },
     {
       title: "Énigme 4 — Gymnase",
       image: "/assets/images/enigme4.png",
-      text: `👉 Quel est le vestiaire du Badminton ?`
+      text: `
+Dans le gymnase de Levier, quatre vestiaires sont alignés : un, deux, trois et quatre.
+
+Chaque groupe de lutins y pratique son sport préféré :
+badminton, handball, tennis et football.
+
+Le Père Noël a noté leurs exigences sur un parchemin :
+
+1️⃣ Les lutins du handball veulent un vestiaire pair.
+2️⃣ Ceux du tennis refusent d’être à côté des lutins du handball.
+3️⃣ Les lutins du badminton doivent être entre deux vestiaires occupés.
+4️⃣ Les lutins du football veulent le vestiaire le plus éloigné de celui du badminton.
+
+👉 Peux-tu retrouver quel sport correspond à chaque vestiaire ?
+  `
     },
     {
       title: "Énigme 5 — Forêt",
       image: "/assets/images/enigme5.png",
-      text: `👉 Valeur de ÉCUREUIL ?`
+      text: `
+Dans la forêt de Levier, la neige étouffe les sons.
+Trois animaux se cachent sous les sapins : un renard, une chouette… et un écureuil.
+
+Chacun garde un secret : un nombre mystérieux, gravé sur une pierre.
+
+RENARD égale cent quatorze.
+CHOUETTE égale cent vingt-huit.
+
+Et ÉCUREUIL ?
+
+Pour trouver sa valeur, il faut découvrir la règle cachée :
+chaque mot vaut la somme de ses lettres selon leur rang dans l’alphabet…
+mais attention : certaines lettres valent plus que d’autres…
+
+👉 À toi de percer le code pour trouver la valeur d’ÉCUREUIL !
+  `
     },
     {
       title: "Énigme 6 — École",
       image: "/assets/images/enigme6.png",
-      text: `👉 Valeur du mot BONHEUR ?`
+      text: `
+Sur le tableau noir de l’école, les enfants ont laissé un message mystérieux :
+
+NOËL égale cinquante.
+SAPIN égale soixante-quatre.
+BONHEUR égale… ?
+
+Chaque mot vaut la somme des positions de ses lettres dans l’alphabet.
+A égale un, B égale deux, C égale trois, et ainsi de suite.
+
+👉 Quelle est la valeur du mot BONHEUR ?
+    `
     },
     {
       title: "Énigme 7 — Grande Place",
       image: "/assets/images/enigme7.png",
-      text: `👉 Nombre magique final ?`
+      text: `
+Le maire s’avance sur la grande place illuminée.
+Il te confie la clé de la dernière porte :
+
+“Additionne tous les chiffres cachés dans les énigmes précédentes,
+puis soustrais le nombre de lettres du mot Levier.”
+
+👉 Quel est le nombre magique final qui ouvre le calendrier de l’Avent ?
+  `
     }
   ];
 
