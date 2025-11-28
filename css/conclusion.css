@@ -132,6 +132,31 @@ html,body{height:100%;margin:0;font-family: "Segoe UI", system-ui, Arial, sans-s
     background: #d62828;
 }
 
+/* Bouton secondaire — transparent noir */
+.actions .btn.secondary {
+    background: rgba(0, 0, 0, 0.4);   /* noir transparent */
+    color: white;
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    padding: 14px 28px;
+    border-radius: 12px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: transform 0.25s ease, 
+                background-color 0.25s ease, 
+                border-color 0.25s ease,
+                box-shadow 0.25s ease,
+                color 0.25s ease;
+}
+
+/* Hover = "blanchissement" subtil + zoom + lumière */
+.actions .btn.secondary:hover {
+    background: rgba(255, 255, 255, 0.2);  /* éclaircissement */
+    color: white;
+    border-color: rgba(255, 255, 255, 0.6);
+    transform: scale(1.08);
+    box-shadow: 0 6px 15px rgba(255, 255, 255, 0.25);
+}
+
 /* apparition progressive */
 .panel{ transform: translateY(10px); opacity:0; animation: panelIn 0.9s ease-out forwards; }
 @keyframes panelIn { to { transform:none; opacity:1; } }
