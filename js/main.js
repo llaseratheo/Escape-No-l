@@ -54,12 +54,12 @@ Un lutin retrouve un petit papier taché de cacao :
 Le problème ? Il ne reste que six cuillères de cacao, quatre de sucre et trois de lait.
 
 👉 Combien de tasses complètes de chocolat chaud peut-on préparer sans tricher sur la recette ?
-'
+`
     },
     {
       title: "Énigme 2 — La Mairie",
       image: "/assets/images/enigme2.png",
-      text: '
+      text: `
 Devant la mairie de Levier, les blasons étincellent sous la neige.
 Trois symboles s’y dessinent :
 Une clé, symbole du passage.
@@ -71,12 +71,12 @@ Levier vient du mot latin levare, qui signifie “soulever”.
 Si chaque symbole correspond à la première lettre de son mot en français — K, S, et L — additionne leur rang dans l’alphabet.
 
 👉 Quel est le total obtenu ?
-'
+`
     },
     {
       title: "Énigme 3 — Rondé",
       image: "/assets/images/enigme3.png",
-      text: `
+      text: ` 
 Sous le grand sapin du Rondé, sept guirlandes s’entremêlent :
 trois, cinq, quatre, six, deux, sept et huit étoiles chacune.
 
