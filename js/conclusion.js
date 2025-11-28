@@ -60,13 +60,12 @@ document.addEventListener("DOMContentLoaded", () => {
     window.location.href = "index.html";
   });
 
-  // bouton certificat simple (export texte en image / PDF possible)
-  certBtn.addEventListener('click', () => {
-    const text = "Je suis un héros de Noël !\nEscape Game - Levier\nNombre magique : 520";
-    // méthode simple : ouvrir une page imprimable (l'utilisateur pourra sauver en PDF)
-    const w = window.open("", "_blank");
-    w.document.write("<pre style='font-family:Segoe UI,Arial; font-size:18px;'>"+text+"</pre>");
-    w.document.close();
-    w.focus();
-  });
+   // bouton certificat -> télécharge un PDF
+   certBtn.addEventListener('click', () => {
+     const link = document.createElement("a");
+     link.href = "assets/certificat.pdf";   // chemin vers ton PDF
+     link.download = "certificat.pdf";      // nom du fichier téléchargé
+     link.click();
+   });
+
 });
