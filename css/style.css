@@ -279,6 +279,9 @@ h2 {
     filter: brightness(0.9) !important;
 }
 
+footer button {
+    margin-top: 20px;
+}
 
 /* -------------------------------------------------
    🔊 TOGGLES AUDIO
