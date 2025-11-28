@@ -94,6 +94,44 @@ html,body{height:100%;margin:0;font-family: "Segoe UI", system-ui, Arial, sans-s
   color: white;
 }
 
+/* Boutons conclusion (même style d’animation que l’intro) */
+.actions .btn {
+    background: #b71c1c;
+    color: white;
+    border: none;
+    padding: 14px 28px;
+    border-radius: 12px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: transform 0.25s ease, background-color 0.25s ease, box-shadow 0.25s ease;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+/* Hover ⇒ plus gros + couleur plus chaude + ombre plus magique */
+.actions .btn:hover {
+    transform: scale(1.08);
+    background: #d62828; /* un rouge plus lumineux façon intro */
+    box-shadow: 0 6px 15px rgba(0,0,0,0.25);
+}
+
+/* Version secondaire (téléchargement) */
+.actions .btn.secondary {
+    background: #8b0000;
+}
+
+.actions .btn.secondary:hover {
+    background: #aa1010;
+}
+
+/* Version primaire (rejouer) */
+.actions .btn.primary {
+    background: #b71c1c;
+}
+
+.actions .btn.primary:hover {
+    background: #d62828;
+}
+
 /* apparition progressive */
 .panel{ transform: translateY(10px); opacity:0; animation: panelIn 0.9s ease-out forwards; }
 @keyframes panelIn { to { transform:none; opacity:1; } }
