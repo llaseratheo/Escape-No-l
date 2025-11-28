@@ -210,6 +210,30 @@ h2 {
     cursor: pointer;
 }
 
+/* Bouton "Écouter l'énigme" — bleu discret */
+.listen-btn {
+    background: rgba(30, 90, 160, 0.75);  /* bleu profond légèrement transparent */
+    color: white;
+    border: 1px solid rgba(255, 255, 255, 0.45);
+    padding: 10px 22px;
+    border-radius: 10px;
+    font-size: 1rem;
+    cursor: pointer;
+
+    transition: background-color 0.25s ease,
+                transform 0.25s ease,
+                box-shadow 0.25s ease,
+                border-color 0.25s ease;
+}
+
+/* Hover = bleu plus clair + légère mise en avant */
+.listen-btn:hover {
+    background: rgba(70, 140, 230, 0.85);  /* bleu clair lumineux */
+    border-color: rgba(255, 255, 255, 0.7);
+    transform: scale(1.07);
+    box-shadow: 0 6px 14px rgba(80, 150, 255, 0.35);
+}
+
 .feedback {
     text-align: center;
     font-size: 1.2rem;
