@@ -37,7 +37,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
   // RÉPONSES
-  const solutions = ["1", "42", "18", "4", "134", "83", "520"];
+  const solutions = ["1", "42", "18", "3", "134", "83", "520"];
 
   // ENIGMES
   const enigmes = [
@@ -102,7 +102,7 @@ Le Père Noël a noté leurs exigences sur un parchemin :
 3️⃣ Les lutins du badminton doivent être entre deux vestiaires occupés.
 4️⃣ Les lutins du football veulent le vestiaire le plus éloigné de celui du badminton.
 
-👉 Peux-tu retrouver quel sport correspond à chaque vestiaire ?
+👉 Peux-tu retrouver le vestiaire atribué au badminton ?
   `
     },
     {
