@@ -37,7 +37,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
   // RÉPONSES
-  const solutions = ["1", "42", "18", "3", "134", "83", "520"];
+  const solutions = ["1", "42", "18", "3", "127", "83", "274"];
 
   // ENIGMES
   const enigmes = [
